@@ -60,4 +60,38 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+
+
+# Product API
+A simple Express.js REST API for managing products.
+
+## How to Run
+npm install
+npm start
+
+Server runs at: http://localhost:3000
+
+## API Endpoints
+All /api/products routes require header:
+x-api-key: 12345
+
+GET /api/products – Get all products
+GET /api/products/:id – Get product by ID
+POST /api/products – Create a product
+PUT /api/products/:id – Update product price
+DELETE /api/products/:id – Delete product
+GET /api/products/filter?category=electronics – Filter by category
+GET /api/products/page?page=1&limit=2 – Pagination
+GET /api/products/search?q=phone – Search by name
+GET /api/products/stats – Product statistics
+
+## Example Request Body
+{
+  "name": "Toaster",
+  "description": "2-slice stainless steel toaster",
+  "price": 25,
+  "category": "kitchen",
+  "inStock": true
+}
